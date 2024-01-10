@@ -1,5 +1,6 @@
 ## OpenBullet
 
+<img src="https://github.com/esfelurm/OpenBullet/assets/104654028/6a1ee1fe-6049-4ab8-a097-2cf6eb373783">
 
 <b>Run any configuration for OpenBullet in Linux/Termox/Windows with this tool!</b>
 
