@@ -4,6 +4,8 @@
 
 <b>Run any configuration for OpenBullet in Linux/Termox/Windows with this tool!</b>
 
+<a href="https://github.com/esfelurm/OpenBullet/tree/main/Config">Config Free </a> 
+
 # install
 
 ```
