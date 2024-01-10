@@ -1,17 +1,16 @@
 ## OpenBullet
 
 
-
-
+<u>Run any configuration for OpenBullet in Linux/Termox/Windows with this tool!</u>
 
 <details>
   <summary>Parsing Loliscript</summary>
 
-  <u> - [x] PARSE
+  - [x] PARSE
   - [x] REQUEST
   - [x] KEYCHECK
   - [x] FUNCTIONS
-  - [x] UTILITY </u>
+  - [x] UTILITY
 </details>
 <details>
   <summary>Processing Blocks</summary>
