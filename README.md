@@ -12,6 +12,21 @@ cd OpenBullet
 python OpenBullet.py
 ```
 
+# support
+
+<table style="width:100%">
+  <tr>
+    <th>Termux</th>
+    <th>Linux</th> 
+    <th>Windows</th>
+  </tr>
+  <tr>
+    <td>✅</td>
+    <td>✅</td> 
+    <td>✅</td>
+  </tr>
+</table>
+
 <details>
   <summary>Parsing Loliscript</summary>
 
