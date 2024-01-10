@@ -8,6 +8,8 @@
 
 <h4> <a href="https://t.me/OpenBullet_E">Channel Telegram Config OpenBullet Free </a></h4>
 
+<img src="https://github.com/esfelurm/OpenBullet/assets/104654028/835500b2-71d5-43ef-9cb0-f92c37b8b940">
+
 # install
 
 ```
