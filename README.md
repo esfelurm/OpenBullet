@@ -36,7 +36,6 @@ python OpenBullet.py
 
 # Options
 
-<details>
   <summary>Parsing Loliscript</summary>
 
   - [x] PARSE
@@ -44,8 +43,8 @@ python OpenBullet.py
   - [x] KEYCHECK
   - [x] FUNCTIONS
   - [x] UTILITY
-</details>
-<details>
+
+
   <summary>Processing Blocks</summary>
 
   - FUNCTION
@@ -104,12 +103,11 @@ python OpenBullet.py
     - [x] Conversion
     - [x] File
     - [x] Folder
-</details>
-<details>
+
   <summary>Proxy</summary>
 
   - [x] HTTP
   - [x] HTTPS
   - [x] SOCKS4
   - [x] SCOKS5
-</details>
+
