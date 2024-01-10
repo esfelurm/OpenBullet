@@ -4,6 +4,14 @@
 
 <b>Run any configuration for OpenBullet in Linux/Termox/Windows with this tool!</b>
 
+# install
+
+```
+git clone https://github.com/esfelurm/OpenBullet
+cd OpenBullet
+python OpenBullet.py
+```
+
 <details>
   <summary>Parsing Loliscript</summary>
 
