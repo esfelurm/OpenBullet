@@ -4,14 +4,14 @@
 
 
 
-
+<details>
   <summary>Parsing Loliscript</summary>
 
-  - [x] PARSE
+  <u>- [x] PARSE
   - [x] REQUEST
   - [x] KEYCHECK
   - [x] FUNCTIONS
-  - [x] UTILITY
+  - [x] UTILITY </u>
 </details>
 <details>
   <summary>Processing Blocks</summary>
