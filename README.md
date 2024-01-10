@@ -27,6 +27,9 @@ python OpenBullet.py
   </tr>
 </table>
 
+
+# Options
+
 <details>
   <summary>Parsing Loliscript</summary>
 
