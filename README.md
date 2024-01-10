@@ -7,7 +7,7 @@
 <details>
   <summary>Parsing Loliscript</summary>
 
-  <u>- [x] PARSE
+  <u> - [x] PARSE
   - [x] REQUEST
   - [x] KEYCHECK
   - [x] FUNCTIONS
