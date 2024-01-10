@@ -1,7 +1,7 @@
 ## OpenBullet
 
 
-<u>Run any configuration for OpenBullet in Linux/Termox/Windows with this tool!</u>
+<b>Run any configuration for OpenBullet in Linux/Termox/Windows with this tool!</b>
 
 <details>
   <summary>Parsing Loliscript</summary>
