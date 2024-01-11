@@ -2561,7 +2561,7 @@ class OBRequest():
     def SetBasicAuth(self, user:str, password:str):
         self.request.auth = HTTPBasicAuth(user, password)
 
-    def SetMultipartContent(self, contents:list[MultipartContent], boundary:str):
+    def SetMultipartContent(self, contents, boundary:str):
         self.request.files = []
         bdry = boundary or GenerateMultipartBoundary()
         self.request.headers["Content-Type"] = f"multipart/form-data; boundary={bdry}"
